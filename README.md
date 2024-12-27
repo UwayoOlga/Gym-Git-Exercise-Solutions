@@ -43,6 +43,8 @@ PS C:\Users\HP\git_exercises> git checkout dev
 Switched to branch 'dev'
 Your branch is up to date with 'origin/dev'.
 PS C:\Users\HP\git_exercises> git branch -d test
+```bash
+### Exercise 2
 Deleted branch test (was 2b69a9e).
 PS C:\Users\HP\git_exercises> git push  
 Everything up-to-date
