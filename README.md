@@ -220,4 +220,51 @@ HEAD is now at 597bbb6 Restoring the home.html and about.html changes
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (dev)
 $
 git push origin dev
+```
+## Bundle 2
+### Exercise 1
+```
 
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/bundle-2)
+$ echo "<html>
+<head><title>Services</title></head>
+<body>
+<h1>My Services</h1>
+<p>swe.</p>
+</body>
+</html>" > services.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/bundle-2)
+$ git add services.html
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the
+ next time Git touches it
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/bundle-2)
+$ git commit -m "Added services.html page"
+[ft/bundle-2 f334c77] Added services.html page
+ 1 file changed, 7 insertions(+)
+ create mode 100644 services.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 357 bytes | 357.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions/pull/new/ft
+/bundle-2
+remote:
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/bundle-2)
+$
