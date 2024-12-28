@@ -268,3 +268,221 @@ To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/bundle-2)
 $
+```
+### Exercise 2
+```
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git pull origin main
+From https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git add service.html
+fatal: pathspec 'service.html' did not match any files
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ ls
+README.md  about.html  file1.txt  home.html  services.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git add --all
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   services.html
+
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git commit -m "Add service.html page"
+[ft/service-redesign d6b1e39] Add service.html page
+ 1 file changed, 17 insertions(+)
+ create mode 100644 services.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 518 bytes | 518.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions/pull/new/ft
+/service-redesign
+remote:
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (add/add): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign|MERGING)
+$ git diff main..ft/service-redesign
+diff --git a/services.html b/services.html
+index a524df9..a8cf865 100644
+--- a/services.html
++++ b/services.html
+@@ -7,7 +7,7 @@
+ </head>
+ <body>
+     <h1>Our Services</h1>
+-    <p>Welcome to my services page. Here are the services i offer:</p>
++    <p>Welcome to my services page i offer:</p>
+     <ul>
+         <li>Web Development</li>
+         <li>App Development</li>
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign|MERGING)
+$ git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign|MERGING)
+$ git pull origin main
+From https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git merge main
+Already up to date.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+Everything up-to-date
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git add service.html
+git commit -m "changes in main"
+fatal: pathspec 'service.html' did not match any files
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git add service.html
+fatal: pathspec 'service.html' did not match any files
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git add --all
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git commit -m "changes in main"
+On branch main
+nothing to commit, working tree clean
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git add --all
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git commit -m "changes in main"
+[main b235995] changes in main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git push origin main
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/UwayoOlga/Gym-Git-Exercis
+e-Solutions.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git pull origin main
+From https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main|MERGING)
+$ git diff main..ft/service-redesign
+diff --git a/services.html b/services.html
+index 1b39903..a8cf865 100644
+--- a/services.html
++++ b/services.html
+@@ -7,7 +7,7 @@
+ </head>
+ <body>
+     <h1>Our Services</h1>
+-    <p>Welcome to my services page. Here are the services i offer:(changes in m
+ain branch )</p>
++    <p>Welcome to my services page i offer:</p>
+     <ul>
+         <li>Web Development</li>
+         <li>App Development</li>
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main|MERGING)
+$ git commit -m "Resolved merge conflicts for main"
+[main cf75932] Resolved merge conflicts for main
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git merge
+fatal: No remote for the current branch.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git merge main
+Already up to date.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git merge main
+Updating c94cb18..cf75932
+Fast-forward
+ services.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git add service.html
+fatal: pathspec 'service.html' did not match any files
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 819 bytes | 409.00 KiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+   c94cb18..cf75932  ft/service-redesign -> ft/service-redesign
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$
+
