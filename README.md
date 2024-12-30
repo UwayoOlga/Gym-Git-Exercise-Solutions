@@ -485,4 +485,338 @@ To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
 $
+```
+## Bundle 3
+### Exercise 1
+```
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+ 
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ touch team.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ echo "<\!DOCTYPE html><html><head><title>Team</title></head><body><h1>My Team</h1></body></html>" > team.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ git add team.html
+git commit -m "Add team.html with initial content"
+git push origin ft/team-page
+warning: in the working copy of 'team.html', LF will be replaced by CRLF the nex
+t time Git touches it
+[ft/team-page 3753b47] Add team.html with initial content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 team.html
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions/pull/new/ft
+/team-page
+remote:
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ git log -1
+commit 3753b479c91ee15502b88dc2ec840791ce0e5280 (HEAD -> ft/team-page, origin/ft
+/team-page)
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Mon Dec 30 09:18:41 2024 +1300
+
+    Add team.html with initial content
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/contact-page)
+$ git cherry-pick 3753b479c91ee15502b88dc2ec840791ce0e5280
+[ft/contact-page 85811e9] Add team.html with initial content
+ Date: Mon Dec 30 09:18:41 2024 +1300
+ 1 file changed, 1 insertion(+)
+ create mode 100644 team.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/contact-page)
+$ touch contact.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/contact-page)
+$ echo "<!DOCTYPE html><html><head><title>Contact</title></head><body><h1>My Contacts</h1></body></html>" > contact.html
+bash: !DOCTYPE: event not found
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/contact-page)
+$ echo "<\!DOCTYPE html><html><head><title>Contact</title></head><body><h1>My Contacts</h1></body></html>" > contact.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/contact-page)
+$ git add contact.html
+git commit -m "Add contact.html with initial content"
+git push origin ft/contact-page
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the
+next time Git touches it
+[ft/contact-page e02e0eb] Add contact.html with initial content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 contact.html
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 663 bytes | 331.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions/pull/new/ft
+/contact-page
+remote:
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+Revert "Add team.html with initial content"
+
+
+
+
+[ft/team-page 7d4205e] Revert "Add team.html with initial content"
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 team.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ git log
+commit 7d4205eb97b1fba9c4a382f4b5a765564688e0d5 (HEAD -> ft/team-page)
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Mon Dec 30 09:38:24 2024 +1300
+
+    Revert "Add team.html with initial content"
+
+    This reverts commit 3753b479c91ee15502b88dc2ec840791ce0e5280.
+
+commit 3753b479c91ee15502b88dc2ec840791ce0e5280 (origin/ft/team-page)
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Mon Dec 30 09:18:41 2024 +1300
+
+    Add team.html with initial content
+
+commit cf759322b0f64c777e34d3838caed2d9cc6f4a24 (origin/ft/service-redesign, main, ft/service-
+redesign)
+Merge: b235995 b49d51f
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 20:16:41 2024 +1300
+
+    Resolved merge conflicts for main
+
+commit b49d51fe21ab779180c979e815a75d0f3c47aeb1
+Merge: 3e83cfd c94cb18
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sun Dec 29 08:06:44 2024 +1300
+
+    Merge pull request #7 from UwayoOlga/ft/service-redesign
+
+    Add service.html page
+
+commit 3e83cfddc368e106e3c1e08809032b520cb32e9b
+Merge: 759be23 46cb621
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sun Dec 29 07:41:46 2024 +1300
+
+    Merge pull request #6 from UwayoOlga/ft/bundle-2
+
+    Add services.html page with basic content
+
+commit 759be2310874c48457e6b9c859875af8c5d5170d
+Merge: 66b7d78 e18ce52
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sun Dec 29 06:40:51 2024 +1300
+
+    Merge pull request #4 from UwayoOlga/ft/bundle-2
+
+    Ft/bundle 2
+
+commit b235995ca059969966360660933947da1640bcff
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 20:11:57 2024 +1300
+
+    changes in main
+
+commit 0abf72aa6bb50a542f1f09e1226e47b748518515
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 20:09:27 2024 +1300
+
+    changes in main
+
+commit 964f75cdea4b5292e497caf98d961aa2b943ce24
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 20:08:59 2024 +1300
+
+    changes in main
+
+commit c94cb184efc6a44747d430b29534b5fc4b6cb741
+Merge: d6b1e39 3e83cfd
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 20:05:16 2024 +1300
+
+    Merge branch 'main' into ft/service-redesign
+
+commit d6b1e396c4cb099cac2d24835bb6c25fb2b64b20
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 19:57:36 2024 +1300
+
+    Add service.html page
+
+commit 46cb621f5200c7db64645a681bc5fa9d9818bcbe (origin/ft/bundle-2, ft/bundle-2)
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 19:38:05 2024 +1300
+
+    Add services.html page with basic content
+
+commit e18ce52e27557b9dc981363ae80f3595cb761e51
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 18:35:44 2024 +1300
+
+    Restored services.html that was deleted
+
+commit 799010f9df1b5c5395ce70303847b1a74630522e
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 18:24:09 2024 +1300
+
+    Remove services.html
+
+commit 66b7d78cb3cd53d95b2c45d8b6bc469bd6f5e1e4
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 18:20:06 2024 +1300
+
+    Remove services.html
+
+commit 9b97d1cb67e9e673cf18112484fe208d1a0c794d
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 17:10:30 2024 +1300
+
+    Delete team.html from main branch
+
+commit 337e186d31f5a91b6408d5dc20141778bedbfb8c
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 13:03:57 2024 +1300
+
+    Updated services.html in main branch
+
+commit 41cb4f55ebc175837b8d9d723dbfcd4e61f33516
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 12:56:30 2024 +1300
+
+    Remove services.html from main branch
+
+commit eea675329c5ef04208cbfdfa6b1010242c223d99
+Merge: ecd3a84 d9318d5
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 12:48:35 2024 +1300
+
+    Merge branch 'main' of https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions
+
+commit d9318d58c3ee2360fe81546764ea64f534142bc8
+Merge: c9f4f36 22e771b
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sun Dec 29 00:40:59 2024 +1300
+
+    Merge pull request #3 from UwayoOlga/ft/service-redesign
+
+    Updated services.html in ft/service-redesign
+
+commit c9f4f36985e4f06385872f10669d6719d2f02cfe
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sun Dec 29 00:13:20 2024 +1300
+
+    Bundle 2, exercise1
+
+commit abac280604b3a11210d3aee11cc07ec7c44e2c51
+Merge: 869f8a2 f334c77
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sun Dec 29 00:06:06 2024 +1300
+
+    Merge pull request #2 from UwayoOlga/ft/bundle-2
+
+    Ft/bundle 2
+
+commit ecd3a84a91d4f9b38a8f01bdac91dc7e3ea4bbde
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 12:42:34 2024 +1300
+Date:   Sat Dec 28 11:36:18 2024 +1300
+
+    Added services.html page
+
+commit 869f8a26a79f588d5a9a03085f94737b4ce2e480
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 02:10:41 2024 +1300
+
+    exercise2
+
+commit 44d572f8e6293ac7e485d8bd47b45c8995871a12
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Sat Dec 28 02:06:44 2024 +1300
+
+    Update README.md
+
+commit 597bbb6c204839180be518272d8b538fb755d715 (origin/dev, dev)
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Fri Dec 27 13:46:09 2024 +1300
+
+    Restoring the home.html and about.html changes
+
+commit 0e0199300f99f7b1282704592db8bb80aec9a1f9
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Fri Dec 27 06:28:51 2024 +1300
+
+    Update README.md
+
+commit b4e7ab9dbb6986899a5f092ab4e5fe34aa5ec1cc
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Thu Dec 26 07:08:33 2024 +1300
+
+    Create README.md
+
+    Bundle1: Exercise 1
+
+commit 2b69a9e35326c19c52a944e760c158a258086ee7
+Author: UwayoOlga <uwayoolga@gmail.com>
+Date:   Wed Dec 25 07:42:24 2024 +1300
+
+    Added file1.txt to repository
+~
+~
+~
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 263 bytes | 263.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+   3753b47..7d4205e  ft/team-page -> ft/team-page
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$
 
