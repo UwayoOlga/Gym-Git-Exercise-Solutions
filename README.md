@@ -820,3 +820,78 @@ To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
 $
 
+```
+## Bundle 3
+### Exercise 2
+```
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ code .
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git add home.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git commit -m "changes in main for bundle 3"
+[main f614eb5] changes in main for bundle 3
+ 1 file changed, 38 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git push origin main
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/UwayoOlga/Gym-Git-Exercis
+e-Solutions.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
+$ git add home.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
+$ git commit -m "changes the home page redesign"
+[ft/home-page-redesign a4c0a88] changes the home page redesign
+ 1 file changed, 1 insertion(+)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 1.96 KiB | 334.00 KiB/s, done.
+Total 15 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting
+remote:      https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions/pull/new/ft
+/home-page-redesign
+remote:
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
+$
+
