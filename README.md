@@ -902,10 +902,6 @@ $
 ```bash
 
 
-
-
-
-
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
 $ git checkout main
 Switched to branch 'main'
@@ -991,4 +987,95 @@ remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
 To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
    a626b09..1aad256  main -> main
  
+
+```
+## Bundle 4
+### Exercise 2
+```bash
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/footer)
+$ git add .
+git commit -m "Adding the changes to the new branch"
+On branch ft/footer
+nothing to commit, working tree clean
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/footer)
+$ git add .
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/footer)
+$ git commit -m "Adding the changes to the new branch"
+[ft/footer 10d8da9] Adding the changes to the new branch
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/footer)
+$ git add .
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/footer)
+$ git commit -m "Adding the additional changes to the new branch"
+[ft/footer cbbc8c9] Adding the additional changes to the new branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 952 bytes | 317.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions/pull/new/ft
+/footer
+remote:
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating b24b0d9..cbbc8c9
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html   | 24 +++++++++++++++++++++++-
+ contact.html |  2 +-
+ 2 files changed, 24 insertions(+), 2 deletions(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/squashing)
+$ git commit -m "Footer changes squashing"
+[ft/squashing 2b78e8c] Footer changes squashing
+ 2 files changed, 24 insertions(+), 2 deletions(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 709 bytes | 236.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions/pull/new/ft
+/squashing
+remote:
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/squashing)
+$
+```
 
