@@ -2,7 +2,7 @@
 ## Bundle 1
 ### Exercise 1
 
-``` 
+```bash
 PS C:\Users\HP\git_exercises> git branch     
 PS C:\Users\HP\git_exercises> git status     
 On branch master
@@ -50,7 +50,7 @@ Everything up-to-date
 ```
 ### Exercise 2
 
-```
+```bash
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (dev)
 $ touch home.html
@@ -223,7 +223,7 @@ git push origin dev
 ```
 ## Bundle 2
 ### Exercise 1
-```
+```bash
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (dev)
 $ git checkout -b ft/bundle-2
@@ -270,7 +270,7 @@ HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/bundle-2)
 $
 ```
 ### Exercise 2
-```
+```bash
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
 $ git checkout main
@@ -488,7 +488,7 @@ $
 ```
 ## Bundle 3
 ### Exercise 1
-```
+```bash
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/service-redesign)
 $ git checkout -b ft/team-page
@@ -823,7 +823,7 @@ $
 ```
 ## Bundle 3
 ### Exercise 2
-```
+```bash
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/team-page)
 $ git checkout ft/faq-page
