@@ -895,3 +895,100 @@ To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
 $
 
+
+```
+## Bundle 4
+### Exercise 1
+```bash
+
+
+
+
+
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git remote add git-copy https://github.com/UwayoOlga/git-copy
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git remote -v
+git-copy        https://github.com/UwayoOlga/git-copy (fetch)
+git-copy        https://github.com/UwayoOlga/git-copy (push)
+origin  https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git (push)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ code .
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git add .
+git commit -m "Updated the home page with new repo"
+warning: adding embedded git repository: websiteclonning-
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> websiteclonning-
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached websiteclonning-
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config advice.addEmbeddedRepo false"
+[main 9c7bd36] Updated the home page with new repo
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 160000 websiteclonning-
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git push origin main
+git push git-copy main
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/UwayoOlga/Gym-Git-Exercis
+e-Solutions.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Enumerating objects: 71, done.
+Counting objects: 100% (71/71), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (67/67), done.
+Writing objects: 100% (71/71), 18.01 KiB | 542.00 KiB/s, done.
+Total 71 (delta 24), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (24/24), done.
+To https://github.com/UwayoOlga/git-copy
+ * [new branch]      main -> main
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git pull origin main
+From https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+Auto-merging home.html
+CONFLICT (content): Merge conflict in home.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main|MERGING)
+$ git add .
+git commit -m "Resolved merge conflicts"
+[main 1aad256] Resolved merge conflicts
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (main)
+$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 776 bytes | 258.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
+   a626b09..1aad256  main -> main
+ 
+
