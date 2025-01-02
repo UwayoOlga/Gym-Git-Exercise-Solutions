@@ -1077,4 +1077,5 @@ To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
 
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/squashing)
 $
+```
 
