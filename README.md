@@ -902,10 +902,6 @@ $
 ```bash
 
 
-
-
-
-
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/home-page-redesign)
 $ git checkout main
 Switched to branch 'main'
