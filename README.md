@@ -1078,4 +1078,47 @@ To https://github.com/UwayoOlga/Gym-Git-Exercise-Solutions.git
 HP@DESKTOP-514LIR9 MINGW64 ~/git_exercises (ft/squashing)
 $
 ```
+## Bundle 5
+### Exercise 2
+```bash
 
+HP@DESKTOP-514LIR9 MINGW64 ~
+$ git clone https://github.com/UwayoOlga/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 1.82 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+HP@DESKTOP-514LIR9 MINGW64 ~
+$ cd git-cafe-exercise
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ code .
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git add index.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git commit -m "Changed text to 'Welcome to our restaurant'"
+[main 4db2549] Changed text to 'Welcome to our restaurant'
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/UwayoOlga/git-cafe-exercise.git
+   d1d3f9c..4db2549  main -> main
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$
+```
+ 
