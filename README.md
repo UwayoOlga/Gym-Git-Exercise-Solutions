@@ -1121,4 +1121,189 @@ To https://github.com/UwayoOlga/git-cafe-exercise.git
 HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
 $
 ```
+## Bundle 6
+### Exercise 1
+```bash
+HP@DESKTOP-514LIR9 MINGW64 ~
+$ git clone https://github.com/UwayoOlga/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 1.82 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+HP@DESKTOP-514LIR9 MINGW64 ~
+$ cd git-cafe-exercise
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ code .
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git add index.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git commit -m "Changed text to 'Welcome to our restaurant'"
+[main 4db2549] Changed text to 'Welcome to our restaurant'
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/UwayoOlga/git-cafe-exercise.git
+   d1d3f9c..4db2549  main -> main
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ cd git-cafe-exercise
+bash: cd: git-cafe-exercise: No such file or directory
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ pwd
+/c/Users/HP/git-cafe-exercise
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ ls
+README.md  css/     index-1.html  index-3.html  index.html
+bat/       images/  index-2.html  index-4.html  js/
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b ft/menu-page
+Switched to a new branch 'ft/menu-page'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ touch menu.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git add menu.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git commit -m "Added menu.html page"
+[ft/menu-page 58ca7ed] Added menu.html page
+ 1 file changed, 96 insertions(+)
+ create mode 100644 menu.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git push origin ft/menu-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.03 KiB | 1.03 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu-page' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/git-cafe-exercise/pull/new/ft/menu-pag
+e
+remote:
+To https://github.com/UwayoOlga/git-cafe-exercise.git
+ * [new branch]      ft/menu-page -> ft/menu-page
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git pull origin main
+From https://github.com/UwayoOlga/git-cafe-exercise
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ gh pr create --base main --head ft/menu-page --title "Added menu.html page" --body "This PR adds the menu.html page."
+bash: gh: command not found
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git checkout ft/menu-page
+Switched to branch 'ft/menu-page'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git add menu.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git commit -m "Added menu.html page"
+[ft/menu-page 7f1b537] Added menu.html page
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git push origin ft/menu-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/UwayoOlga/git-cafe-exercise.git
+   58ca7ed..7f1b537  ft/menu-page -> ft/menu-page
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git pull origin main
+From https://github.com/UwayoOlga/git-cafe-exercise
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git merge ft/menu-page
+Updating 4db2549..7f1b537
+Fast-forward
+ menu.html | 96 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 96 insertions(+)
+ create mode 100644 menu.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/UwayoOlga/git-cafe-exercise.git
+   4db2549..7f1b537  main -> main
+ 
+``` 
+## Bundle 6
+### Exercise 2
+```bash
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b bugfix
+Switched to a new branch 'bugfix'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (bugfix)
+$ git add index-4.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (bugfix)
+$ git commit -m "Update title of index-4.html to 'Contact'"
+[bugfix 077aa92] Update title of index-4.html to 'Contact'
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (bugfix)
+$ git push origin bugfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bugfix' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/git-cafe-exercise/pull/new/bugfix
+remote:
+To https://github.com/UwayoOlga/git-cafe-exercise.git
+ * [new branch]      bugfix -> bugfix
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (bugfix)
+$
+
  
