@@ -1306,4 +1306,47 @@ To https://github.com/UwayoOlga/git-cafe-exercise.git
 HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (bugfix)
 $
 
- 
+ ``` 
+## Bundle 6
+### Exercise 3
+```bash
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (bugfix)
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (hotfix)
+$ git add index-4.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (hotfix)
+$ git commit -m "Updating the contacts"
+On branch hotfix
+nothing to commit, working tree clean
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (hotfix)
+$ git add index-4.html
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (hotfix)
+$ git commit -m "Updating the contacts"
+[hotfix ecebd23] Updating the contacts
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+HP@DESKTOP-514LIR9 MINGW64 ~/git-cafe-exercise (hotfix)
+$ git push origin hotfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'hotfix' on GitHub by visiting:
+remote:      https://github.com/UwayoOlga/git-cafe-exercise/pull/new/hotfix
+remote:
+To https://github.com/UwayoOlga/git-cafe-exercise.git
+ * [new branch]      hotfix -> hotfix
+
+ ``` 
+
+
